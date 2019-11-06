@@ -1,7 +1,6 @@
 const { GraphQLSchema, GraphQLObjectType } = require("graphql");
-const { TaskType, TaskInputType } = require("./types");
 const rootQueries = require("./queries");
-const { Task } = require("./schemas");
+const rootMutations = require("./mutations");
 
 const rootQuery = new GraphQLObjectType({
   name: "rootQuery",
@@ -10,20 +9,7 @@ const rootQuery = new GraphQLObjectType({
 
 const rootMutation = new GraphQLObjectType({
   name: "rootMutation",
-  fields: {
-    createTask: {
-      type: TaskType,
-      args: TaskInputType.getFields(),
-      resolve: (_, args) => {
-        const { title, description, progress } = args;
-        return new Task({
-          title,
-          description,
-          progress
-        }).save();
-      }
-    }
-  }
+  fields: rootMutations
 });
 
 module.exports = new GraphQLSchema({

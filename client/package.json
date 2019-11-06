@@ -1,0 +1,8 @@
+{
+  "name": "liteproject-frontend",
+  "version": "0.0.1",
+  "description": "Front-end for LiteProject - an open-source light-weight project management system.",
+  "main": "server.js",
+  "author": "Barend Du Toit",
+  "license": "MIT"
+}

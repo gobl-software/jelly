@@ -1,7 +1,7 @@
 {
-  "name": "liteproject-frontend",
+  "name": "liteproject-backend",
   "version": "0.0.1",
-  "description": "Backend server for LiteProject - an open-source light-weight project management system.",
+  "description": "Back-end server for LiteProject - an open-source light-weight project management system.",
   "main": "server.js",
   "author": "Barend Du Toit",
   "license": "MIT",
