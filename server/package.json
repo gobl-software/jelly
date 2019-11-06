@@ -1,0 +1,26 @@
+{
+  "name": "liteproject-frontend",
+  "version": "0.0.1",
+  "description": "Backend server for LiteProject - an open-source light-weight project management system.",
+  "main": "server.js",
+  "author": "Barend Du Toit",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.7",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
