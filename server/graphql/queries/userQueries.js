@@ -1,6 +1,11 @@
 const { GraphQLList } = require("graphql");
-const { UserType, UserInputType } = require("../types");
-const { allUsers } = require("../resolvers");
+const {
+  UserType,
+  UserInputType,
+  LoginInputType,
+  VerifyTokenType
+} = require("../types");
+const { allUsers, loginUser, verifyToken } = require("../resolvers");
 
 module.exports = {
   users: {
@@ -8,6 +13,20 @@ module.exports = {
     args: UserInputType.getFields(),
     resolve: (_, args) => {
       return allUsers(args);
+    }
+  },
+  loginUser: {
+    type: UserType,
+    args: LoginInputType.getFields(),
+    resolve: (_, args) => {
+      return loginUser(args);
+    }
+  },
+  verifyToken: {
+    type: UserType,
+    args: VerifyTokenType.getFields(),
+    resolve: (_, args) => {
+      return verifyToken(args);
     }
   }
 };

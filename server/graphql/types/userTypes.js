@@ -11,8 +11,9 @@ module.exports = {
     fields: {
       _id: { type: GraphQLID },
       username: { type: GraphQLString },
+      email: { type: GraphQLString },
       password: { type: GraphQLString },
-      email: { type: GraphQLString }
+      token: { type: GraphQLString }
     }
   }),
 
@@ -22,7 +23,23 @@ module.exports = {
       _id: { type: GraphQLID },
       username: { type: GraphQLString },
       password: { type: GraphQLString },
+      confirm: { type: GraphQLString },
       email: { type: GraphQLString }
+    }
+  }),
+
+  LoginInputType: new GraphQLInputObjectType({
+    name: "LoginInputType",
+    fields: {
+      username: { type: GraphQLString },
+      password: { type: GraphQLString }
+    }
+  }),
+
+  VerifyTokenType: new GraphQLObjectType({
+    name: "VerifyTokenType",
+    fields: {
+      token: { type: GraphQLString }
     }
   })
 };
