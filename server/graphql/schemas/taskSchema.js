@@ -14,14 +14,18 @@ const taskSchema = new Schema({
     type: String,
     required: true
   },
-  requirements: {
-    type: [{ type: Schema.Types.ObjectId, ref: "Task" }]
-  },
   assignedBy: {
     type: Schema.Types.ObjectId,
     ref: "User"
   },
-  assignedTo: [{ type: Schema.Types.ObjectId, ref: "User" }]
+  assignedTo: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  requirements: {
+    type: [{ type: Schema.Types.ObjectId, ref: "Task" }]
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 const task = mongoose.model("Task", taskSchema);

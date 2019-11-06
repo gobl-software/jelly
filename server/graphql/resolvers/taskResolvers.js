@@ -5,11 +5,6 @@ module.exports = {
     return Task.find(args ? args : null);
   },
   createTask: args => {
-    const { title, description, progress } = args;
-    return new Task({
-      title,
-      description,
-      progress
-    }).save();
+    return new Task(args).save();
   }
 };

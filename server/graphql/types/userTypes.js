@@ -17,7 +17,7 @@ module.exports = {
   }),
 
   UserInputType: new GraphQLInputObjectType({
-    name: "UserInput",
+    name: "UserInputType",
     fields: {
       _id: { type: GraphQLID },
       username: { type: GraphQLString },
