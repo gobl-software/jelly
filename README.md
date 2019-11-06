@@ -3,7 +3,7 @@
 Clone the repository with:
 
 ```bash
-git clone https://github.com/barenddt/LiteProject.git
+git clone https://github.com/OpenLiteTools/LiteProject.git
 cd ./LightProject
 ```
 
